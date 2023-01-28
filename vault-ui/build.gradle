@@ -68,7 +68,7 @@ afterEvaluate {
                 from components.release
                 groupId 'com.github.flutureis'
                 artifactId 'vault'
-                version =  '1.0'// or manually '1.0'
+                version =  '0.0.1'
             }
         }
     }
