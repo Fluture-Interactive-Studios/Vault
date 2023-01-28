@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vault_nav_graph"
+    app:startDestination="@id/componentListFragment">
+
+    <fragment
+        android:id="@+id/componentListFragment"
+        android:name="com.flutureis.vault.presentation.list.ComponentListFragment"
+        android:label="ComponentListFragment" >
+        <action
+            android:id="@+id/action_componentListFragment_to_buttonsFragment"
+            app:destination="@id/buttonsFragment" />
+        <action
+            android:id="@+id/action_componentListFragment_to_carouselFragment"
+            app:destination="@id/carouselFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/buttonsFragment"
+        android:name="com.flutureis.vault.presentation.components.ButtonsFragment"
+        android:label="ButtonsFragment" />
+    <fragment
+        android:id="@+id/carouselFragment"
+        android:name="com.flutureis.vault.presentation.components.CarouselFragment"
+        android:label="CarouselFragment" />
+
+
+</navigation>

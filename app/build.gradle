@@ -23,6 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -30,7 +31,13 @@ android {
 
     buildFeatures {
         compose = true
+        dataBinding = true
     }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.0"
+    }
+
 
     kotlinOptions {
         jvmTarget = '1.8'
@@ -44,6 +51,10 @@ dependencies {
     implementation 'com.google.android.material:material:1.8.0'
     implementation("androidx.compose.material3:material3:1.0.1")
 
+    //Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
+
     //Integration with activities
     implementation("androidx.activity:activity-compose:1.6.1")
 
@@ -54,5 +65,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation project(":vault-ui")
+    implementation ("com.github.Fluture-Interactive-Studios:Vault:0.0.1")
 }
